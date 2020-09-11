@@ -44,6 +44,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'     //Google Material Lib.
     implementation 'com.hbb20:ccp:2.4.0'                            //Country Code picker
     implementation "com.airbnb.android:lottie:3.4.1"                // Lottie Animations
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

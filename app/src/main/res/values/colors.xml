@@ -5,6 +5,7 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="white">#FFFFFF</color>
-    <color name="Fadedwhite">#99FFFFFF</color>
+    <color name="Fadedwhite">#40FFFFFF</color>
     <color name="dark_Organe">#f46646</color>
+    <color name="blue">#0621C9</color>
 </resources>

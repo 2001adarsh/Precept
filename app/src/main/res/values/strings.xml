@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Precept</string>
+    <string name="Otp_heading">Waiting for automatically detect the SMS sent to %s.\nWrong Number? Click Here!</string>
 </resources>

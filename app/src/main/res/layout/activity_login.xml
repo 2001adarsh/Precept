@@ -80,6 +80,8 @@
         android:backgroundTint="@color/white"
         android:ems="10"
         android:inputType="phone"
+        android:letterSpacing="0.2"
+        android:maxLength="10"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/countryCodePicker"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,9 +92,11 @@
         android:id="@+id/send_otp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Send otp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/Fadedwhite"
+        android:clickable="true"
+        android:enabled="false"
+        android:text="Send otp"
         android:textColor="@color/dark_Organe"
         android:textSize="18sp"
         app:cornerRadius="30dp"
@@ -101,6 +105,17 @@
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
         app:layout_constraintVertical_bias="0.19999999" />
+
+    <TextView
+        android:id="@+id/error_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#FB0707"
+        app:layout_constraintEnd_toEndOf="@+id/send_otp"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/send_otp"
+        app:layout_constraintTop_toBottomOf="@+id/send_otp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
