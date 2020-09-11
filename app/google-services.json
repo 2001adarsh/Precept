@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "249750363918",
+    "firebase_url": "https://precept-2b0fd.firebaseio.com",
+    "project_id": "precept-2b0fd",
+    "storage_bucket": "precept-2b0fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249750363918:android:50c9b61e5c0ab73288c15f",
+        "android_client_info": {
+          "package_name": "com.adarsh.precept"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249750363918-kjd56j98te22v242redasli53799a97v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4McI7kM09dndVhsYq8CezQqSOz7bP74Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249750363918-kjd56j98te22v242redasli53799a97v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
