@@ -30,6 +30,7 @@
         android:layout_marginEnd="24dp"
         android:gravity="center"
         android:text="Waiting for automatically detect the SMS sent to phoneNumber. Wrong Number?"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Seconds Remaining:"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/waiting_text"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="@+id/waiting_text"
@@ -52,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="10"
-        android:textColor="@color/blue"
+        android:textColor="@color/dark_Organe"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/textView5" />
 
@@ -84,6 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Enter a 6-digit code"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/otp_num"
         app:layout_constraintStart_toStartOf="@+id/otp_num"

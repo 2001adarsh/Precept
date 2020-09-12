@@ -8,4 +8,8 @@
     <color name="Fadedwhite">#40FFFFFF</color>
     <color name="dark_Organe">#f46646</color>
     <color name="blue">#0621C9</color>
+    <color name="cream">#fed6e3</color>
+    <color name="lightBlue">#30A5D0</color>
+    <color name="grey">#898181</color>
+    <color name="darkBlue">#330867</color>
 </resources>

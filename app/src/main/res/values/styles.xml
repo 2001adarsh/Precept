@@ -9,4 +9,10 @@
 
     </style>
 
+    <style name="circularImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="android:background">@color/cream</item>
+    </style>
+
 </resources>
