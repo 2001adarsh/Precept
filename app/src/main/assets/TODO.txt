@@ -1,2 +1,2 @@
 -> Firebase Extension - Image Thumbnail. (Resizing the image)
--> Adding Progress Bar to Upload Profile to Database.
+-> Adding Progress Bar to Upload Profile to Database.  ----------> (Done)
