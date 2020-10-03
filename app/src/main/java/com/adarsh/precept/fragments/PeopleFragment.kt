@@ -10,6 +10,7 @@ import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.adarsh.precept.*
+import com.adarsh.precept.adapter.EmptyViewHolder
 import com.adarsh.precept.adapter.UsersViewHolder
 import com.adarsh.precept.models.User
 import com.firebase.ui.firestore.paging.FirestorePagingAdapter
@@ -28,12 +29,10 @@ private const val NORMAL_VIEW_TYPE = 2 //TO select ViewHolder that user can see 
 class PeopleFragment : Fragment() {
 
     lateinit var mAdapter:FirestorePagingAdapter<User, RecyclerView.ViewHolder> //Using two viewHolders in a single Adapter.
-    val auth by lazy {
-        FirebaseAuth.getInstance()
-    }
+    val auth by lazy { FirebaseAuth.getInstance() }
     val database by lazy {
-        FirebaseFirestore.getInstance().collection("users").
-                orderBy("name", Query.Direction.DESCENDING)
+        FirebaseFirestore.getInstance().collection("users")
+            .orderBy("name", Query.Direction.DESCENDING)
     }
 
     override fun onCreateView(
@@ -136,5 +135,7 @@ class PeopleFragment : Fragment() {
             adapter = mAdapter
         }
     }
+
+
 
 }

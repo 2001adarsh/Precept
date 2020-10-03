@@ -3,4 +3,13 @@
     <string name="Otp_heading">Waiting for automatically detect the SMS sent to %s.\nWrong Number? Click Here!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
 </resources>
