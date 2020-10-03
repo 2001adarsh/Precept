@@ -24,7 +24,7 @@
         app:shapeAppearanceOverlay="@style/circularImage" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/titleTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -34,12 +34,12 @@
         android:textColor="#060606"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/textView9"
+        app:layout_constraintEnd_toStartOf="@+id/timeTv"
         app:layout_constraintStart_toEndOf="@+id/chat_profile_pic"
         app:layout_constraintTop_toTopOf="@+id/chat_profile_pic" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/subtitleTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -47,22 +47,22 @@
         android:ellipsize="end"
         android:lines="1"
         android:text="Hey there I'm also using WhatsApp. How are you doing?"
-        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/titleTv"
         app:layout_constraintStart_toEndOf="@+id/chat_profile_pic"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTv" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/timeTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
         android:text="6/10/20"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="@+id/titleTv" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/countTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
@@ -81,8 +81,8 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintStart_toEndOf="@+id/subtitleTv"
+        app:layout_constraintTop_toBottomOf="@+id/titleTv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

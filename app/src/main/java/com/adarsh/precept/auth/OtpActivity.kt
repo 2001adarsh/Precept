@@ -1,9 +1,8 @@
-package com.adarsh.precept
+package com.adarsh.precept.auth
 
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
-import android.location.GnssNavigationMessage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -14,9 +13,9 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.util.Log
 import android.view.View
-import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
+import com.adarsh.precept.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
@@ -162,7 +161,9 @@ class OtpActivity : AppCompatActivity() {
                 verify_btn.backgroundTintList = ContextCompat.getColorStateList(this, R.color.white)
                 verify_btn.isClickable = true
             }else{
-                verify_btn.backgroundTintList = ContextCompat.getColorStateList(this, R.color.Fadedwhite)
+                verify_btn.backgroundTintList = ContextCompat.getColorStateList(this,
+                    R.color.Fadedwhite
+                )
                 verify_btn.isClickable = false
             }
         }

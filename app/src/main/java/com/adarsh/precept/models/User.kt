@@ -1,4 +1,4 @@
-package com.adarsh.precept
+package com.adarsh.precept.models
 
 import com.google.firebase.firestore.FieldValue
 

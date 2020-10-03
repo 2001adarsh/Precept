@@ -1,4 +1,4 @@
-package com.adarsh.precept
+package com.adarsh.precept.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

@@ -1,4 +1,4 @@
-package com.adarsh.precept
+package com.adarsh.precept.auth
 
 import android.Manifest
 import android.app.Activity
@@ -6,7 +6,6 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +13,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import com.adarsh.precept.MainActivity
+import com.adarsh.precept.R
+import com.adarsh.precept.models.User
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
@@ -65,6 +67,7 @@ class ProfileSetUpActivity : AppCompatActivity() {
                 database.collection("users").document(auth.uid!!).set(user)
                     .addOnSuccessListener {
                         //Next Page
+                        progressDialog.cancel()
                         startActivity(Intent(this, MainActivity::class.java)
                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK))
                     }.addOnFailureListener{

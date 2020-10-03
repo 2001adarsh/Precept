@@ -1,3 +1,6 @@
 -> Firebase Extension - Image Thumbnail. (Resizing the image)
--> Adding Progress Bar to Upload Profile to Database.  ----------> (Done)
 -> Update the MainActivity UI
+-> Update the FirebaseUI use to native pagination by firebase.
+-> https://firebase.google.com/docs/firestore/quickstart#kotlin+ktx_1 - this link contains details of Firestore
+-> TabsLayout and ViewPager2 not in sync
+->

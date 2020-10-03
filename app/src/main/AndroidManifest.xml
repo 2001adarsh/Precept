@@ -12,23 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity"
-            android:theme="@style/FullScreen"
-            android:screenOrientation="portrait">
+        <activity android:name=".ChatActivity"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfileSetUpActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".OtpActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LoginActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".auth.ProfileSetUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".auth.OtpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"

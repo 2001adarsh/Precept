@@ -1,10 +1,11 @@
-package com.adarsh.precept
+package com.adarsh.precept.auth
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
+import com.adarsh.precept.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -23,7 +24,9 @@ class LoginActivity : AppCompatActivity() {
                 send_otp.isClickable = true
             }else{
                 error_num.text = "Phone number of 10 digits."
-                send_otp.backgroundTintList = ContextCompat.getColorStateList(this, R.color.Fadedwhite)
+                send_otp.backgroundTintList = ContextCompat.getColorStateList(this,
+                    R.color.Fadedwhite
+                )
                 send_otp.isClickable = false
             }
         }
