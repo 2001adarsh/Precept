@@ -31,7 +31,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = '1.8'
     }
 }
 
@@ -51,12 +51,16 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage-ktx:19.2.0' //Kotlin version
     implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
 
+    implementation 'com.google.android:flexbox:2.0.1' //Flex Layout
+    implementation 'com.vanniktech:emoji-google:0.6.0'  //Emoji Keyboard
+
     implementation 'com.squareup.picasso:picasso:2.71828' //Picasso
 
     implementation 'com.firebaseui:firebase-ui-firestore:6.3.0' //For Pagination.
     implementation "androidx.paging:paging-runtime:2.1.2"
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-database:19.4.0'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
