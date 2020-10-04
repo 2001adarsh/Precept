@@ -13,10 +13,11 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
         app:cardBackgroundColor="@color/grey"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,22 +33,28 @@
             app:justifyContent="flex_start">
 
             <TextView
-                android:id="@+id/received_mssg"
+                android:id="@+id/msg_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                tools:text="This is Adarsh" />
-
-            <TextView
-                android:id="@+id/received_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:textColor="#A6ffffff"
                 android:textSize="12sp"
                 tools:text="5:20 AM" />
-        </com.google.android.flexbox.FlexboxLayout>
 
+            <TextView
+                android:id="@+id/main_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:text="This is Adarsh" />
+        </com.google.android.flexbox.FlexboxLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72749394" />
 </androidx.constraintlayout.widget.ConstraintLayout>

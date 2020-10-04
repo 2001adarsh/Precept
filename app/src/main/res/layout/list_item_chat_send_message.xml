@@ -13,12 +13,13 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
         app:cardBackgroundColor="@color/purple"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearance="@style/ChatSentShapeAppearance">
 
@@ -29,23 +30,31 @@
             app:alignItems="flex_end"
             app:flexWrap="wrap"
             app:justifyContent="flex_end">
-            
+
             <TextView
-                android:id="@+id/sent_mssg"
+                android:id="@+id/main_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                tools:text="This is Adarsh"/>
+                tools:text="This is Adarsh" />
+
             <TextView
-                android:id="@+id/sent_time"
+                android:id="@+id/msg_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:textColor="#A6ffffff"
                 android:textSize="12sp"
-                tools:text="5:20 AM"/>
+                tools:text="5:20 AM" />
         </com.google.android.flexbox.FlexboxLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.23" />
 </androidx.constraintlayout.widget.ConstraintLayout>
