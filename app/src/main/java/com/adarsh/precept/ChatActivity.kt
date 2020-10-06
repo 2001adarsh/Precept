@@ -14,9 +14,15 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 import com.vanniktech.emoji.EmojiManager
+import com.vanniktech.emoji.EmojiPopup
 import com.vanniktech.emoji.google.GoogleEmojiProvider
 import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.list_item_chat_send_message.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlin.coroutines.CoroutineContext
 
 const val UID = "uid"
 const val NAME = "name"
@@ -58,6 +64,21 @@ class ChatActivity : AppCompatActivity() {
         Picasso.get().load(friendImage).placeholder(R.drawable.defaultimage)
             .error(R.drawable.defaultimage).into(friend_image)
 
+        //Emoji icon Setup
+        val emojiPopup = EmojiPopup.Builder.fromRootView(rootView).build(mssg_init)
+        emoji_icon.setOnClickListener {
+            emojiPopup.toggle()
+        }
+
+        //Refresh
+        swipeRefreshLayout.setOnRefreshListener {
+            val workScope = CoroutineScope(Dispatchers.Main)
+            workScope.launch {
+                delay(2000)
+                swipeRefreshLayout.isRefreshing = false
+            }
+        }
+
         send_icon.setOnClickListener {
             mssg_init.text?.let {  //Message written by current user.
                 if (it.isNotEmpty()) {
@@ -67,11 +88,18 @@ class ChatActivity : AppCompatActivity() {
             }
         }
         chatAdapter = ChatAdapter(list = messages, currentUID)
+
         msgRV.apply {
             layoutManager = LinearLayoutManager(this@ChatActivity)
             adapter = chatAdapter
         }
+
+
         listenToMessages()
+        markAsRead()        //If the ChatActivity is opened. then the message is read.
+        chatAdapter.lovedClick = {id, status->     //Loved action
+            updateLovedStatus(id, status)
+        }
     }
 
     private fun sendMessage(msg: String) {
@@ -83,7 +111,6 @@ class ChatActivity : AppCompatActivity() {
         }.addOnFailureListener {
             Log.i("TAG", "sendMessage: Failure")
         }
-
         updateLastMessage(msgMap)
     }
 
@@ -124,6 +151,9 @@ class ChatActivity : AppCompatActivity() {
     private fun markAsRead(){
         getInbox(friendUid, currentUID).child("count").setValue(0)
     }
+    private fun updateLovedStatus(id:String, status:Boolean){
+        getMessages(friendUid).child(id).updateChildren(mapOf("liked" to status))
+    }
 
     private fun listenToMessages(){
         getMessages(friendUid)
@@ -157,8 +187,7 @@ class ChatActivity : AppCompatActivity() {
 
     private fun getMessages(friendId: String) = db.reference.child("messages/${getId(friendId)}")
 
-    private fun getInbox(toUser: String, fromUser: String) =
-        db.reference.child("Chats/$toUser/$fromUser")
+    private fun getInbox(toUser: String, fromUser: String) = db.reference.child("Chats/$toUser/$fromUser")
 
     //Id for the messages.
     private fun getId(friendId: String): String {
