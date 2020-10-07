@@ -13,7 +13,7 @@
         android:id="@+id/materialCardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/grey"
+        app:cardBackgroundColor="@color/message_received"
         app:cardElevation="0dp"
         app:layout_constrainedWidth="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -37,8 +37,8 @@
                 android:id="@+id/msg_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#A6ffffff"
-                android:textSize="12sp"
+                android:textColor="@color/emoji_black"
+                android:textSize="14sp"
                 tools:text="5:20 AM" />
 
             <TextView
@@ -46,8 +46,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:textColor="@color/white"
-                android:textSize="14sp"
+                android:textColor="@color/emoji_black"
+                android:textSize="16sp"
                 tools:text="This is Adarsh" />
         </com.google.android.flexbox.FlexboxLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -65,7 +65,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="1dp"
         android:adjustViewBounds="true"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/materialCardView"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView"
         app:srcCompat="@drawable/ic_heart_on" />

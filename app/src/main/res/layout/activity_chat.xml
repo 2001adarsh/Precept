@@ -12,7 +12,7 @@
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/darkBlue"
+        android:background="@color/message_sent"
         android:elevation="10dp"
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
         app:contentInsetLeft="0dp"
@@ -52,8 +52,7 @@
         android:id="@+id/swipeRefreshLayout"
         android:layout_width="416dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:background="@color/pallete"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,16 +71,15 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/pallete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="6dp"
+            android:background="@color/pallete"
             app:cardCornerRadius="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/send_icon"
@@ -90,7 +88,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/pallete">
 
                 <ImageView
                     android:id="@+id/emoji_icon"
@@ -141,6 +140,8 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="5dp"
             android:adjustViewBounds="true"
+            android:background="@color/pallete"
+            android:backgroundTint="@color/pallete"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

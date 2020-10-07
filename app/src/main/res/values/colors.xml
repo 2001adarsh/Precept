@@ -7,11 +7,15 @@
     <color name="white">#FFFFFF</color>
     <color name="Fadedwhite">#40FFFFFF</color>
     <color name="dark_Organe">#f46646</color>
-    <color name="blue">#0621C9</color>
     <color name="cream">#fed6e3</color>
-    <color name="lightBlue">#30A5D0</color>
+    <color name="lightBlue">#007aff</color>
     <color name="grey">#898181</color>
     <color name="darkBlue">#330867</color>
     <color name="purple">#7F0CB8</color>
     <color name="GreenB">#066b62</color>
+
+    <color name="message_received">#eaeaea</color>
+    <color name="message_sent">#0379ff</color>
+    <color name="pallete">#f8f9fb</color>
+    <color name="fragment">#f5f6f1</color>
 </resources>

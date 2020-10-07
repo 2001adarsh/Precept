@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/GreenB"
+        android:background="@color/lightBlue"
         android:elevation="10dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,14 +23,14 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/lightBlue"
         android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:tabIndicatorColor="@color/white"
         app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="@color/grey">
+        app:tabTextColor="#C1EAEAEA">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -41,6 +41,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PEOPLE" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings" />
 
     </com.google.android.material.tabs.TabLayout>
 
