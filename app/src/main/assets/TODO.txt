@@ -1,4 +1,2 @@
 -> Firebase Extension - Image Thumbnail. (Resizing the image)
--> Update the MainActivity UI
 -> Update the FirebaseUI use to native pagination by firebase.
-->

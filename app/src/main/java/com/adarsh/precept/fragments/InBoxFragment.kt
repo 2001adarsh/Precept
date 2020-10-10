@@ -53,6 +53,11 @@ class InBoxFragment : Fragment(), InboxAdapter.OnItemClickListener {
         adapter.stopListening()
     }
 
+    override fun onResume() {
+        super.onResume()
+        adapter.notifyDataSetChanged()
+    }
+
     override fun onItemClick(name: String, image: String, uid: String) {
         val intent = Intent(requireContext(), ChatActivity::class.java)
         intent.putExtra(UID, uid)
