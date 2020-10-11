@@ -1,8 +1,10 @@
 package com.adarsh.precept
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adarsh.precept.adapter.ChatAdapter
 import com.adarsh.precept.models.*
@@ -49,9 +51,9 @@ class ChatActivity : AppCompatActivity() {
         EmojiManager.install(GoogleEmojiProvider()) //Install the emoji's before inflating the xml file.
         setContentView(R.layout.activity_chat)
 
-        homeButton.setOnClickListener {
-            finish()
-        }
+        setSupportActionBar(materialToolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         //current user object
         FirebaseFirestore.getInstance().collection("users").document(currentUID).get()
@@ -100,6 +102,23 @@ class ChatActivity : AppCompatActivity() {
         chatAdapter.lovedClick = { id, status ->     //Loved action
             updateLovedStatus(id, status)
         }
+
+        //Opening the Friends UserProfile
+        friend_image.setOnClickListener {
+            val fintent = Intent(this, UserProfileActivity::class.java)
+            fintent.putExtra(UID, friendUid)
+            fintent.putExtra(NAME, friendName)
+            fintent.putExtra(IMAGE, friendImage)
+            startActivity(fintent)
+        }
+        friend_name.setOnClickListener {
+            val fintent = Intent(this, UserProfileActivity::class.java)
+            fintent.putExtra(UID, friendUid)
+            fintent.putExtra(NAME, friendName)
+            fintent.putExtra(IMAGE, friendImage)
+            startActivity(fintent)
+        }
+
     }
 
     private fun sendMessage(msg: String) {
@@ -201,5 +220,14 @@ class ChatActivity : AppCompatActivity() {
             friendId + currentUID
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 }

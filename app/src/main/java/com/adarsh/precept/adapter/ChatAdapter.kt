@@ -61,6 +61,10 @@ class ChatAdapter(
                             override fun onDoubleClick(v: View?) {
                                 Log.e("TAG", "onDoubleClick: ", )
                                 lovedClick?.invoke(item.msgID, !item.liked)
+                                if(holder.itemView.likedImage.visibility == View.GONE)
+                                    holder.itemView.likedImage.visibility = View.VISIBLE
+                                else
+                                    holder.itemView.likedImage.visibility = View.GONE
                             }
                         })
                         if (item.liked) {
